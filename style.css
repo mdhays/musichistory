@@ -5,3 +5,18 @@ nav {
 	font-size:14px;
 	background-color: #FFB4B0;
 }
+
+header {
+	font-size: 28px
+}
+
+body {
+	text-align: center;
+}
+
+#info {
+	border: solid;
+	margin: auto;
+	background-color: #FEFAC0 
+}
+
