@@ -12,8 +12,9 @@ header {
 
 #blue {
 	text-align: center;
-	background-color: 4DD7FA;
+	background-color: #4DD7FA;
 	float: left;
+
 }
 
 #info {
@@ -36,4 +37,8 @@ form {
 	
 	background-color:  #4DD7FA 
 
+}
+
+label, select {
+	display: block;
 }
