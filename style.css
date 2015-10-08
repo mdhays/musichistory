@@ -10,14 +10,16 @@ header {
 	font-size: 28px
 }
 
-body {
+#blue {
 	text-align: center;
-	background-color: 4DD7FA
+	background-color: 4DD7FA;
+	float: left;
 }
 
 #info {
 	border: solid;
 	margin: auto;
+	float: right; 
 	background-color: #FEFAC0 
 }
 
@@ -29,4 +31,9 @@ li {
 	display: inline;
 }
 
+form {
+	border: solid;
+	
+	background-color:  #4DD7FA 
 
+}
