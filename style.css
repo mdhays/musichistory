@@ -24,6 +24,10 @@ li {
 	display: inline;
 }
 
-#specific {
+#div {
 	display: inline;
+}
+
+#search {
+	background-color: #4DD7FA
 }
