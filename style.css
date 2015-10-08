@@ -20,3 +20,10 @@ body {
 	background-color: #FEFAC0 
 }
 
+li {
+	display: inline;
+}
+
+#specific {
+	display: inline;
+}
