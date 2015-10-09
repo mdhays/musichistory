@@ -52,10 +52,44 @@ label, select {
 
 #red {
 	width:980px;
-	
+
 }
 
 body {
 	margin: 100px;
 	margin-right: 360px;
 }
+
+#song-length {
+	padding: 10px;
+}
+
+#artist-name {
+	padding: 10px;
+}
+
+#album-name {
+	padding: 10px;
+}
+
+#checkboxes {
+	padding: 20px;
+}
+
+#row1 {
+	text-align: left;
+	display: block;
+	padding: 5px;
+}
+
+#row2 {
+	text-align: right;
+	display: block;
+	padding: 5px;
+}
+
+
+
+
+
+
