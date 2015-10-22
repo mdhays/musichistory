@@ -30,6 +30,17 @@ console.log("currentvalue", songs[i])
 
 songsElement.innerHTML = songs
 
-document.getElementById(add).addEventListener("click", function() {
-	 (document.getElementById(inputs).className = "none"
-})
+document.getElementById("showform").addEventListener("click", function(event) {
+	event.preventDefault();
+	document.getElementById("yellow").className = "hidden";
+	document.getElementById("blue").className = "hidden";
+	document.getElementById("inputs").className = "visible";
+});
+console.log("showform", showform)
+
+document.getElementById("listform").addEventListener("click", function(event) {
+	event.preventDefault();
+	document.getElementById("yellow").className = "visible";
+	document.getElementById("blue").className = "visible";
+	document.getElementById("inputs").className = "hidden";
+});
