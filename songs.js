@@ -19,16 +19,26 @@ songs.unshift("Peace Of Mind > by Above and Beyond on album We're All We Need")
 songs.push("Moonlight Sonata > by Ludwig van Beethoven on the album Classics for the Heart")
 
 
-for (var i = 0; i < songs.length ; i++) {
-	songs[i] = songs[i].replace("*", "");
-	songs[i] = songs[i].replace("@", "");
-	songs[i] = songs[i].replace("(", "");
-	songs[i] = songs[i].replace(">", "-");
-	songs[i] = songs[i].replace("!", "")
-}
-console.log("currentvalue", songs[i])
+var songLoader =function () {
 
-songsElement.innerHTML = songs
+	for (var i = 0; i < songs.length ; i++) {
+		songs[i] = songs[i].replace("*", "");
+		songs[i] = songs[i].replace("@", "");
+		songs[i] = songs[i].replace("(", "");
+		songs[i] = songs[i].replace(">", "-");
+		songs[i] = songs[i].replace("!", "")
+	}
+	console.log("currentvalue", songs[i])
+
+	songsElement.innerHTML = songs
+}
+songLoader();
+
+document.getElementById("add").addEventListener("click", function() {
+	songs.push(document.getElementById("songname").value + " by " + document.getElementById("artistname").value + " on the album " + document.getElementById("albumname").value);
+	songLoader();
+});
+
 
 document.getElementById("showform").addEventListener("click", function(event) {
 	event.preventDefault();
@@ -44,3 +54,11 @@ document.getElementById("listform").addEventListener("click", function(event) {
 	document.getElementById("blue").className = "visible";
 	document.getElementById("inputs").className = "hidden";
 });
+
+
+
+
+
+
+
+
