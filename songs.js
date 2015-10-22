@@ -19,7 +19,7 @@ songs.unshift("Peace Of Mind > by Above and Beyond on album We're All We Need")
 songs.push("Moonlight Sonata > by Ludwig van Beethoven on the album Classics for the Heart")
 
 // All the functionality as of Version4
-/* var songLoader =function () {
+ var songLoader =function () {
 
 	for (var i = 0; i < songs.length ; i++) {
 		songs[i] = songs[i].replace("*", "");
@@ -33,10 +33,11 @@ songs.push("Moonlight Sonata > by Ludwig van Beethoven on the album Classics for
 	songsElement.innerHTML = songs
 }
 songLoader();
+/*  / This adds songs to DOM /
 
 document.getElementById("add").addEventListener("click", function() {
 	songs.push(document.getElementById("songname").value + " by " + document.getElementById("artistname").value + " on the album " + document.getElementById("albumname").value);
-	songLoader();
+	songLoader();    
 });
 
 
@@ -57,8 +58,28 @@ document.getElementById("listform").addEventListener("click", function(event) {
 
 // Version5
 
+$(document).ready(function() {
+  // All the JavaScript that depends on jQuery will be written here
 
 
+	$("#showform").click(function() {
+		$("#yellow").hide();
+		$("#blue").hide();
+		$(".hidden").show();
+	});
 
+	$("#listform").click(function() {
+		$("#yellow").show();
+		$("#blue").show();
+		$(".hidden").hide();
+	});
 
+});
+		
+// Trying to make this work
+
+$("add").click(function() {
+	songs.push$("songname").value + " by " + $("artistname").value + " on the album " + $("albumname").value;
+	songLoader();    
+});
 
