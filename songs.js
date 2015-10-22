@@ -29,3 +29,7 @@ for (var i = 0; i < songs.length ; i++) {
 console.log("currentvalue", songs[i])
 
 songsElement.innerHTML = songs
+
+document.getElementById(add).addEventListener("click", function() {
+	 (document.getElementById(inputs).className = "none"
+})
