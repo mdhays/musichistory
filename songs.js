@@ -18,8 +18,8 @@ songs.unshift("Peace Of Mind > by Above and Beyond on album We're All We Need")
 //Each student must add one song to the end of the array.
 songs.push("Moonlight Sonata > by Ludwig van Beethoven on the album Classics for the Heart")
 
-
-var songLoader =function () {
+// All the functionality as of Version4
+/* var songLoader =function () {
 
 	for (var i = 0; i < songs.length ; i++) {
 		songs[i] = songs[i].replace("*", "");
@@ -53,9 +53,9 @@ document.getElementById("listform").addEventListener("click", function(event) {
 	document.getElementById("yellow").className = "visible";
 	document.getElementById("blue").className = "visible";
 	document.getElementById("inputs").className = "hidden";
-});
+}); */
 
-
+// Version5
 
 
 
