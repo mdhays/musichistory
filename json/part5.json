@@ -1,0 +1,19 @@
+{
+  "songs": [
+    {
+      "title": "Blue Monday",
+      "artist": "New Order",
+      "album": "Singles"
+    },
+    {
+      "title": "Counting Down The Days",
+      "artist": "Above & Beyond",
+      "album": "Counting Down The Days"      
+    },
+    {
+      "title": "Taito",
+      "artist": "Mord Fustang",
+      "album": "Taito"      
+    }
+  ]
+}
