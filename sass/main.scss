@@ -1,0 +1,98 @@
+
+nav {
+	border: solid;
+	margin: auto;
+	text-align: left;
+	font-size:14px;
+	background-color: #90C8FF;
+	padding: 20px;
+	margin-right: 200px;
+}
+
+header {
+	font-size: 28px;
+}
+
+#blue {
+	text-align: center;
+	background-color: #4DD7FA;
+	float: left;
+	width: auto;
+	height: auto;
+	border: solid;
+	padding: 20px;
+	margin-top: 20px;	
+}
+
+#yellow {
+	border: solid;
+	margin: auto;
+	float: right; 
+	background-color: #000066;
+	width: auto;
+	height: auto;
+	padding: 20px;
+	margin-top: 20px;
+	margin-right: 200px;
+}
+
+li {
+	display: inline;
+}
+
+#div {
+	display: inline;
+}
+
+form {
+	background-color:  #4DD7FA 
+
+}
+
+label, select {
+	display: block;
+}
+
+/*#red {
+	width:980px;*/
+
+
+
+body {
+	margin: 100px;
+	margin-right: 360px;
+}
+
+/* Blue form divs */
+
+#song-length {
+	padding: 10px;
+}
+
+#artist-name {
+	padding: 10px;
+}
+
+#album-name {
+	padding: 10px;
+}
+
+#checkboxes {
+	padding: 20px;
+}
+
+#row1 {
+	text-align: left;
+	display: block;
+	padding: 5px;
+}
+
+#row2 {
+	text-align: right;
+	display: block;
+	padding: 5px;
+}
+
+.hidden {
+	display: none;
+}
