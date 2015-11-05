@@ -14,5 +14,5 @@ define(["jquery"], function($) {
                 whenAJAXDoesThisFunc(contentsOfTheFile); 
            });
         } 
-    }
+    };
   });

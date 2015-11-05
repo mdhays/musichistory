@@ -18,7 +18,7 @@ require(
 
 // Trying to make this work
 
-  $("add").click(function() {
+  $("#add").click(function() {
   	 songs.push($("songname").value + " by " + $("artistname").value + " on the album " + $("albumname").value);
   	 songLoader();    
 

@@ -25,7 +25,8 @@ form {
 /*#red {
 	width:980px;*/
 body {
-  background-color: #01579B; }
+  background-color: #01579B;
+  padding-top: 75px; }
 
 /* Blue form divs */
 .hidden {
