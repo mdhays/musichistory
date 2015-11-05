@@ -20,7 +20,8 @@ header {
 
 #yellow {
 	border: solid;
-	background-color: #000028;
+	background: linear-gradient(135deg, #000028, #000028 10%, #00008B);
+	// background-color: #000028;
 	font-family: Century Gothic, sans-serif;
 	opacity: .90;
 }
@@ -51,5 +52,13 @@ body {
 }
 
 h1 {
+	color: #0000E3;
+}
+
+p {
+	color: #0000E3;
+}
+
+input {
 	color: #0000E3;
 }

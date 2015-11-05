@@ -36,9 +36,11 @@ require(
   	  	$("#yellow").prepend(
   	  		"<div><h1>" + 
   	  		currentSong.title + 
-  	  		"</h1><p>Performed by " +
+  	  		"</h1><p> by " +
   	  		currentSong.artist + 
-  	  		"<div> on the album </div></p><button class='delete'>Delete</button></div>"
+  	  		"<p> on the album " +
+          currentSong.album +
+           "</p></p><button class='delete'>Delete</button></div>"
   	  	);
     		console.log("currentSong", currentSong.title);
     }
