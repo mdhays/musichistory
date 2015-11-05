@@ -7,13 +7,13 @@ require(
 	$("#showform").click(function() {
     $("#yellow").hide();
     $("#blue").hide();
-    $(".hidden").show();
+    $(".hiddens").show();
   });
 
 	$("#listform").click(function() {
 		$("#yellow").show();
 		$("#blue").show();
-		$(".hidden").hide();
+		$(".hiddens").hide();
 	});
 
 // Trying to make this work
