@@ -19,13 +19,23 @@ requirejs.config({
   },
   paths:{
     "jquery": "../lib/bower_components/jquery/dist/jquery.min",
-    "bootstrap": "../lib/bower_components/bootstrap/dist/js/bootstrap.min"
+    "bootstrap": "../lib/bower_components/bootstrap/dist/js/bootstrap.min",
+    "hbs": "../lib/bower_components/require-handlebars-plugin/hbs"
   }
 });
 
 require(
-  ["jquery", "bootstrap", "songs"], 
-  function($, bootstrap, songs) {
-
+  ["jquery", "bootstrap", "hbs", "songs", "populateSongs"], 
+  function($, bootstrap, hbs, songs, populateSongs) {
+    populateSongs.getFirstSongs(function(data) {
+      require(['hbs!../templates/songs'], function (songTemplate){
+        //jquery to grab the dom element where we want to put our songs
+        //use songTemplate on data to generate html
+        //insert html into dom
+        var newHTML = songTemplate(data);
+        $("#yellow").prepend(newHTML);
+      })
+    })
   }
 );
+

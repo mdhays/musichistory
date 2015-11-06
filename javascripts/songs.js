@@ -47,7 +47,7 @@ require(
     
   }
 
-  populateSongs.getFirstSongs(displayInDom);
+  // populateSongs.getFirstSongs(displayInDom);
 
     $("#more").click(function() {
       getMoreSongs.getSecondSongs(displayInDom);

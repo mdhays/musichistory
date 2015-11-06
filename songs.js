@@ -32,7 +32,7 @@ songs.push("Moonlight Sonata > by Ludwig van Beethoven on the album Classics for
 
 	songsElement.innerHTML = songs
 }
-songLoader();
+// songLoader();
 /*  / This adds songs to DOM /
 
 document.getElementById("add").addEventListener("click", function() {
