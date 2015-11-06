@@ -49,8 +49,8 @@ require(
 
   // populateSongs.getFirstSongs(displayInDom);
 
-    $("#more").click(function() {
-      getMoreSongs.getSecondSongs(displayInDom);
-    });
+    // $("#more").click(function() {
+      // getMoreSongs.getSecondSongs(displayInDom);
+    // });
 
 });//End of Define

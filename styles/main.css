@@ -13,13 +13,15 @@ header {
   background-color: #0000BE;
   border: solid;
   font-family: Century Gothic, sans-serif;
-  opacity: .90; }
+  opacity: .90;
+  border-color: #3B3BFF; }
 
 #yellow {
   border: solid;
   background: linear-gradient(135deg, #000028, #000028 10%, #00008B);
   font-family: Century Gothic, sans-serif;
-  opacity: .90; }
+  opacity: .90;
+  border-color: #3B3BFF; }
 
 form {
   background-color: #0000BE; }
@@ -45,6 +47,7 @@ p {
   color: #0000E3; }
 
 input {
-  color: #0000E3; }
+  color: #0000E3;
+  margin-top: 20px; }
 
 /*# sourceMappingURL=main.css.map */

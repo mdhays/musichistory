@@ -1,11 +1,12 @@
 {{#each songs}}
 <div class='song'>
-<h2>{{title }}</h2>
-<ul>
-    <li>{{artist}}</li>
-    <li class='middle'>{{album}}</li>
-    <li>{{genre}}</li>
-</ul>
+<h1>{{title }}</h1>
+<section>
+    <p>{{artist}}</p>
+    <p class='middle'>{{album}}</p>
+    <p>{{genre}}</p>
+</section>
 <button class='delete-song btn btn-default' type='button'>Delete</button>
 </div>
 {{/each}}
+

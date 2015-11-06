@@ -3,17 +3,20 @@
     {
       "title": "Lick It",
       "artist": "Skrillex & Kaskade",
-      "album": "Fire and Ice"
+      "album": "Fire and Ice",
+      "genre": "Electronic"
     },
     {
       "title": "Fellow Feeling",
       "artist": "Porter Robinson",
-      "album": "Worlds"      
+      "album": "Worlds",
+      "genre": "Electronic"      
     },
     {
       "title": "Breaking The Habit",
       "artist": "Linkin Park",
-      "album": "Meteora"      
+      "album": "Meteora",
+      "genre": "Rock"      
     }
   ]
 }

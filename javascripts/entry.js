@@ -25,17 +25,22 @@ requirejs.config({
 });
 
 require(
-  ["jquery", "bootstrap", "hbs", "songs", "populateSongs"], 
-  function($, bootstrap, hbs, songs, populateSongs) {
-    populateSongs.getFirstSongs(function(data) {
+  ["jquery", "bootstrap", "hbs", "songs", "populateSongs","getmoreSongs"], 
+  function($, bootstrap, hbs, songs, populateSongs, getmoreSongs) {
+    populateSongs.getFirstSongs(songDisplay);
+    $("#more").click(function() {
+      getmoreSongs.getSecondSongs(songDisplay); 
+    });
+
+
+    function songDisplay (data) {
       require(['hbs!../templates/songs'], function (songTemplate){
         //jquery to grab the dom element where we want to put our songs
         //use songTemplate on data to generate html
         //insert html into dom
-        var newHTML = songTemplate(data);
-        $("#yellow").prepend(newHTML);
-      })
-    })
+        $("#yellow").prepend(songTemplate(data));
+      });
+    }
   }
 );
 
