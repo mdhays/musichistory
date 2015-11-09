@@ -1,9 +1,9 @@
 {
   "songs": [
     {
-      "title": "Lick It",
-      "artist": "Skrillex & Kaskade",
-      "album": "Fire and Ice",
+      "title": "Sea Tides",
+      "artist": "Andy Blueman",
+      "album": "Sea Tides EP",
       "genre": "Electronic"
     },
     {
@@ -13,10 +13,10 @@
       "genre": "Electronic"      
     },
     {
-      "title": "Breaking The Habit",
-      "artist": "Linkin Park",
-      "album": "Meteora",
-      "genre": "Rock"      
+      "title": "Archangel",
+      "artist": "Burial",
+      "album": "Untrue",
+      "genre": "Electronic"      
     }
   ]
 }

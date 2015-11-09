@@ -1,22 +1,40 @@
 {
-  "songs": [
-    {
-      "title": "Blue Monday",
-      "artist": "by New Order",
-      "album": "on the album Singles",
-      "genre": "Electronic"
-    },
-    {
-      "title": "Counting Down The Days",
-      "artist": "by Above & Beyond",
-      "album": "on the album Counting Down The Days",
-      "genre": "Electronic"      
-    },
-    {
-      "title": "Taito",
-      "artist": "by Mord Fustang",
-      "album": "on the album Taito",      
-      "genre": "Electronic"
-    }
-  ]
+  "songs": {
+      "blue": {
+          "title": "Blue Monday",
+          "artist": "New Order",
+          "album": "Singles",
+          "genre": "Electronic"
+        },
+       "counting": {
+          "title": "Counting Down The Days",
+          "artist": "Above & Beyond",
+          "album": "Counting Down The Days",
+          "genre": "Electronic"
+        },
+       "strobe": {
+          "title": "Strobe",
+          "artist": "deadmau5",
+          "album": "Lack of a Better Name",
+          "genre": "Electronic"
+        },
+      "sea": {
+          "title": "Sea Tides",
+          "artist": "Andy Blueman",
+          "album": "Sea Tides EP",
+          "genre": "Electronic"
+        },
+       "fellow": {
+          "title": "Fellow Feeling",
+          "artist": "Porter Robinson",
+          "album": "Worlds",
+          "genre": "Electronic"
+        },
+        "archangel": {
+          "title": "Archangel",
+          "artist": "Burial",
+          "album": "Untrue",
+          "genre": "Electronic"
+        }
+      }
 }
