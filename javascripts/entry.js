@@ -40,7 +40,32 @@ require(
         //insert html into dom
         $("#yellow").prepend(songTemplate(data));
       });
+
+      require(['hbs!../templates/artistname'], function (artistTemplate){
+        //jquery to grab the dom element where we want to put our songs
+        //use songTemplate on data to generate html
+        //insert html into dom
+        $("#Artist").prepend(artistTemplate(data));
+      });
+    
+      require(['hbs!../templates/albumname'], function (albumTemplate){
+        //jquery to grab the dom element where we want to put our songs
+        //use songTemplate on data to generate html
+        //insert html into dom
+        $("#Album").prepend(albumTemplate(data));
+      });
+
     }
+
+    // function artistDisplay (data) {
+    //   require(['hbs!../templates/artistname'], function (artistTemplate){
+    //     //jquery to grab the dom element where we want to put our songs
+    //     //use songTemplate on data to generate html
+    //     //insert html into dom
+    //     $("#Artist").html(artistTemplate(data));
+    //   });
+    
+    // }
   }
 );
 
