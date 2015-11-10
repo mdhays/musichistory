@@ -19,9 +19,10 @@ define(["jquery"], function($) {
 
     $("#add").click(function(e) {
       var newSong = {
-        "name": $("#songname").val(),
+        "title": $("#songname").val(),
         "artist": $("#artistname").val(),
-        "album": $("#albumname").val()
+        "album": $("#albumname").val(),
+        "genre": $("#genrename").val()
       };
         $.ajax ({
           data: JSON.stringify(newSong),

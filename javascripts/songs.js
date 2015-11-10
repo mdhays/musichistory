@@ -61,24 +61,4 @@ function getTheInputs() {
   }
 
 
-//Added to try and show added songs in the DOM//
-  function addInDom(newSong) {
-      console.log("newSong", newSong);
-      for (var i = 0; i < newSong; i++) {
-        var currentNewSong = newSong;
-        $("#yellow").prepend(
-          "<div><h1>" + 
-          newSong.name + 
-          "</h1><p> by " +
-          newSong.artist + 
-          "<p> " +
-          currentSong.album +
-           "</p></p><button class='delete'>Delete</button></div>"
-        );
-        console.log("currentSong", currentSong.title);
-    }
-    
-  }
-
-
 });//End of Define
