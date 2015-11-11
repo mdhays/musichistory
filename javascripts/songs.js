@@ -1,6 +1,6 @@
 require(
-  ["jquery", "populateSongs", "getmoreSongs"],
-  function($, populateSongs, getMoreSongs) {
+  ["jquery", "populateSongs", "getmoreSongs", "filter"],
+  function($, populateSongs, getMoreSongs, filter) {
   // All the JavaScript that depends on jQuery will be written here
 
 
@@ -33,7 +33,10 @@ function getTheInputs() {
         
 }
 
-
+//Filter button
+$("#filter").click(function() {
+  filter();
+});
 
 
 

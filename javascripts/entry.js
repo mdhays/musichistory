@@ -25,8 +25,8 @@ requirejs.config({
 });
 
 require(
-  ["jquery", "bootstrap", "hbs", "songs", "populateSongs","getmoreSongs"], 
-  function($, bootstrap, hbs, songs, populateSongs, getmoreSongs) {
+  ["jquery", "bootstrap", "hbs", "songs", "populateSongs","getmoreSongs", "filter"], 
+  function($, bootstrap, hbs, songs, populateSongs, getmoreSongs, filter) {
     populateSongs.getFirstSongs(songDisplay);
     $("#more").click(function() {
       getmoreSongs.getSecondSongs(songDisplay); 
@@ -57,15 +57,7 @@ require(
 
     }
 
-    // function artistDisplay (data) {
-    //   require(['hbs!../templates/artistname'], function (artistTemplate){
-    //     //jquery to grab the dom element where we want to put our songs
-    //     //use songTemplate on data to generate html
-    //     //insert html into dom
-    //     $("#Artist").html(artistTemplate(data));
-    //   });
-    
-    // }
+ 
   }
 );
 
