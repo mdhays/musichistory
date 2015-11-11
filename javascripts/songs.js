@@ -16,13 +16,9 @@ require(
     $(".hiddens").hide();
   });
 
-// Trying to make this work
-
-  // $("#add").click(function() {
-  //   songs.push($("songname").value + " by " + $("artistname").value + " on the album " + $("albumname").value);
-  //   songLoader();    
-
-  // });
+$("#filter").click(function() {
+  filter.filterMe();
+    });
 
 // Getting the inputs //
 
@@ -32,12 +28,6 @@ function getTheInputs() {
   var albumInput = $("#albumname").val();
         
 }
-
-//Filter button
-$("#filter").click(function() {
-  filter();
-});
-
 
 
   $(document).on('click', '.delete', function() {

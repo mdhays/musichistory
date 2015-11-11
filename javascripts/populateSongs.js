@@ -3,7 +3,7 @@ define(["jquery"], function($) {
 	return {
 		getFirstSongs: function(whenAJAXDoneFunc) {
 			 $.ajax({
-			    url: "https://blinding-heat-5245.firebaseio.com/.json"
+			    url: "https://musichistory7hays.firebaseio.com/.json"
 			  }).done(function(contentsOfTheFile) {
 			    // When you tell jQuery to read a file via the ajax method
 			    // it reads the contents, and then executes whatever function

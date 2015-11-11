@@ -1,15 +1,37 @@
 define(["jquery", "populateSongs"], function($, populateSongs) {
 
-var filter = $("#filter");
-var filteredSongs = {songs:{}};
+	var myFirebaseData;
+	var filter = $("#filter");
+	var filteredSongs = {songs:{}};
 
+	populateSongs.getFirstSongs(function(firebaseObject) {
+		myFirebaseData = firebaseObject;
+	});
+
+function filterMe() {
+	filteredSongs = {songs:{}};
 
 		// Get the selected artist √
-var selectedArtist = $("#Artist option:selected");
+	var selectedArtist = $("#Artist option:selected").val();
 		
-		// Loop through all songs that you get from Firebase
-		
-		
+	// Loop through all songs that you get from Firebase
+	for (var key in myFirebaseData.songs) {
+		var currentSong = myFirebaseData.songs[key];
+			console.log(currentSong);
+			console.log(selectedArtist);
+		if (selectedArtist === currentSong.artist) {
+			filteredSongs.songs[key] = currentSong;
+			console.log("THE ANSWER IS:",filteredSongs.songs[key]);
+		}
+	}
+	$("#yellow").html("");
+	
+		require(['hbs!../templates/songs'], function (songTemplate){
+        //jquery to grab the dom element where we want to put our songs
+        //use songTemplate on data to generate html
+        //insert html into dom
+        $("#yellow").prepend(songTemplate(filteredSongs));
+      });
 
 
 		// In the loop, check if the current song's artist value
@@ -18,6 +40,12 @@ var selectedArtist = $("#Artist option:selected");
 		// If it does, add that song object to a new object named `filteredSongs`
 
 		// Pass filteredSongs to the Handlebar template
+
+	}
+
+	return {
+		filterMe: filterMe,
+	};
 
 
 
