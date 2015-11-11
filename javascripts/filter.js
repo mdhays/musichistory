@@ -1,14 +1,27 @@
-define(["jquery"], function($) {
+define(["jquery", "populateSongs"], function($, populateSongs) {
 
 var filter = $("#filter");
+var filteredSongs = {songs:{}};
 
-	filter.click(function() {
-		var artistMatch = $("#Artist option:selected").text();
-			console.log("artistMatch", artistMatch);
-		var albumMatch = $("#Album option:selected").text();
-			console.log("albumMatch", albumMatch);
-		var listOfSongs = $(".songs");
-		console.log("listOfSongs", listOfSongs);
-		console.log("event", event);
-	});
+
+		// Get the selected artist √
+var selectedArtist = $("#Artist option:selected");
+		
+		// Loop through all songs that you get from Firebase
+		
+		
+
+
+		// In the loop, check if the current song's artist value
+		// matches the selected artist
+
+		// If it does, add that song object to a new object named `filteredSongs`
+
+		// Pass filteredSongs to the Handlebar template
+
+
+
+
+
+
 });

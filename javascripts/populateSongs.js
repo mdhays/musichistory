@@ -1,3 +1,4 @@
+
 define(["jquery"], function($) {
 	return {
 		getFirstSongs: function(whenAJAXDoneFunc) {
