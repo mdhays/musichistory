@@ -38,23 +38,18 @@ function getTheInputs() {
 
 
 
-      // Create a reference to your Firebase database
+      // Created a reference to my Firebase database
     var myFirebaseRef = new Firebase("https://musichistory7hays.firebaseio.com");
     console.log("myFirebaseRef", myFirebaseRef);
-    // Listen for when anything changes on the "songs" key
+    // Listening for when anything changes on the "songs" key
     myFirebaseRef.on("value", function(snapshot) {
 
-      // Store the entire songs key in a local variable
+      // Storing the entire songs key in a local variable
       var allSongsObject = snapshot.val();
 
-      // Bind the allSongsObject to the song list Handlebar template
-  
+      
+        //This is what's updating the DOM. We're telling the file to go into the songdisplay
         songdisplay.songDisplay(allSongsObject);
-
-      // Bind the unique artists to the artists template
-
-
-      // Bind the unique albums to the albums template
 
     });
 

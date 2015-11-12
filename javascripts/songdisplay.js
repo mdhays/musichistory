@@ -1,9 +1,8 @@
 define(["jquery", "populateSongs"], function($, populateSongs) {
 
+  // We're returning the function immediately so we can use the function like an object,
+  // where songDisplay is a key.
   return {
-// This is what initially displays the songs.
-// populateSongs.getFirstSongs(songDisplay);
-
     songDisplay: function(data) {
       require(['hbs!../templates/songs'], function (songTemplate){
         //jquery to grab the dom element where we want to put our songs

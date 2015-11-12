@@ -10,7 +10,7 @@ define(["jquery"], function($) {
       };
         $.ajax ({
           data: JSON.stringify(newSong),
-          url: "https://blinding-heat-5245.firebaseio.com/songs.json",
+          url: "https://musichistory7hays.firebaseio.com/songs.json",
           method: "POST"
         }).done(function(data) {
           console.log(data);
