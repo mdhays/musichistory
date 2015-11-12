@@ -7,7 +7,7 @@ define(["jquery", "populateSongs"], function($, populateSongs) {
 	populateSongs.getFirstSongs(function(firebaseObject) {
 		myFirebaseData = firebaseObject;
 	});
-
+// If it does, add that song object to a new object named `filteredSongs`
 function filterMe() {
 	filteredSongs = {songs:{}};
 
@@ -19,6 +19,10 @@ function filterMe() {
 		var currentSong = myFirebaseData.songs[key];
 			console.log(currentSong);
 			console.log(selectedArtist);
+
+			// In the loop, check if the current song's artist value
+		// matches the selected artist
+		
 		if (selectedArtist === currentSong.artist) {
 			filteredSongs.songs[key] = currentSong;
 			console.log("THE ANSWER IS:",filteredSongs.songs[key]);
@@ -34,10 +38,9 @@ function filterMe() {
       });
 
 
-		// In the loop, check if the current song's artist value
-		// matches the selected artist
+		
 
-		// If it does, add that song object to a new object named `filteredSongs`
+		
 
 		// Pass filteredSongs to the Handlebar template
 

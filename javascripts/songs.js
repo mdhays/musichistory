@@ -1,7 +1,8 @@
 require(
-  ["jquery", "populateSongs", "getmoreSongs", "filter"],
-  function($, populateSongs, getMoreSongs, filter) {
+  ["jquery", "populateSongs", "getmoreSongs", "filter", "songdisplay", "firebase"],
+  function($, populateSongs, getMoreSongs, filter, songdisplay, firebase) {
   // All the JavaScript that depends on jQuery will be written here
+
 
 
   $("#showform").click(function() {
@@ -35,23 +36,27 @@ function getTheInputs() {
     console.log(this);
   });
 
-  function displayInDom(songList) {
-      console.log("songList", songList);
-      for (var i = 0; i < songList.songs.length; i++) {
-        var currentSong = songList.songs[i];
-        $("#yellow").prepend(
-          "<div><h1>" + 
-          currentSong.title + 
-          "</h1><p> by " +
-          currentSong.artist + 
-          "<p> " +
-          currentSong.album +
-           "</p></p><button class='delete'>Delete</button></div>"
-        );
-        console.log("currentSong", currentSong.title);
-    }
-    
-  }
+
+
+      // Create a reference to your Firebase database
+    var myFirebaseRef = new Firebase("https://musichistory7hays.firebaseio.com");
+    console.log("myFirebaseRef", myFirebaseRef);
+    // Listen for when anything changes on the "songs" key
+    myFirebaseRef.on("value", function(snapshot) {
+
+      // Store the entire songs key in a local variable
+      var allSongsObject = snapshot.val();
+
+      // Bind the allSongsObject to the song list Handlebar template
+  
+        songdisplay.songDisplay(allSongsObject);
+
+      // Bind the unique artists to the artists template
+
+
+      // Bind the unique albums to the albums template
+
+    });
 
 
 });//End of Define

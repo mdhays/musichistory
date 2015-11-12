@@ -13,48 +13,23 @@ requirejs.config({
     bootstrap: {
       deps: ['jquery'],
       exports: 'bootstrap'
+    },
+    "firebase": {
+      exports: "Firebase"
     }
   },
   paths:{
     "jquery": "../lib/bower_components/jquery/dist/jquery.min",
     "bootstrap": "../lib/bower_components/bootstrap/dist/js/bootstrap.min",
-    "hbs": "../lib/bower_components/require-handlebars-plugin/hbs"
+    "hbs": "../lib/bower_components/require-handlebars-plugin/hbs",
+    "firebase": "../lib/bower_components/bower_components/firebase/firebase"
   }
 });
 
 require(
-  ["jquery", "bootstrap", "hbs", "songs", "populateSongs","getmoreSongs", "filter"], 
-  function($, bootstrap, hbs, songs, populateSongs, getmoreSongs, filter) {
-    populateSongs.getFirstSongs(songDisplay);
-    $("#more").click(function() {
-      getmoreSongs.getSecondSongs(songDisplay); 
+  ["jquery", "bootstrap", "hbs", "songs", "populateSongs","getmoreSongs", "filter", "firebase"], 
+  function($, bootstrap, hbs, songs, populateSongs, getmoreSongs, filter, firebase) {
+    
     });
 
-
-    function songDisplay (data) {
-      require(['hbs!../templates/songs'], function (songTemplate){
-        //jquery to grab the dom element where we want to put our songs
-        //use songTemplate on data to generate html
-        //insert html into dom
-        $("#yellow").prepend(songTemplate(data));
-      });
-
-      require(['hbs!../templates/artistname'], function (artistTemplate){
-        //jquery to grab the dom element where we want to put our songs
-        //use songTemplate on data to generate html
-        //insert html into dom
-        $("#Artist").prepend(artistTemplate(data));
-      });
     
-      require(['hbs!../templates/albumname'], function (albumTemplate){
-        //jquery to grab the dom element where we want to put our songs
-        //use songTemplate on data to generate html
-        //insert html into dom
-        $("#Album").prepend(albumTemplate(data));
-      });
-
-    }
-
- 
-  }
-);
