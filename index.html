@@ -11,70 +11,36 @@
 	</title>
 </head>
 <body ng-app="SongsApp">
-<div id="red">
+	<div id="red">
 
-<header>
-	<nav>
-		<ul> 
-			<a id="listform" href="#">List music</a>
-			
-			<a id="showform" href="#">Add music</a>
-		</ul>
+		<header>
+			<nav>
+				<ul> 
+					<a id="listform" href="#/songs/list">List music</a>
+					
+					<a id="showform" href="#/songs/new">Add music</a>
+				</ul>
 
-	</nav>
-
-
-</header>
-
-</div>
-
-<div id="inputs" class="hidden">
-		<input id="songname" type="text" name="song-name" value="song-name">
-		<input id="artistname" type="text" name="artist-name" value="artist-name">
-		<input id="albumname" type="text" name="album-name" value="album-name">
-		<input type="button" name="add" value="add" id="add">
-	</div>	
-	
-<!-- Yellow Box / Information -->
+			</nav>
 
 
+		</header>
 
-<div id="yellow" ng-controller="SongsCtrl">
-	<div>
-		<div ng-repeat="song in songs">
-    <h1>{{ song.title }}</h1>
-    <h2>{{ song.artist}}</h2>
-    <h3>{{ song.album}}</h3>
-		</div>
-    
 	</div>
-</div>
+	
+<!-- Angular partials will populate here -->
 
+<div ng-view></div>
 
-<!-- Blue Box / Search Options -->
-<div id="blue">
-<form>
-
-
-
-	<div id="song-length">
-<input type="range" name="Song Length" value="Song Length"> Song Length
-</div>
-
-<div id="artist-name">
-	<select name="Artist" id="Artist">
-	</select>
-</div>
-
-<div id="album-name">
-	<select name="Album">
-	</select>
-</div>
-</form>
-</div>
-
+	<!-- Since we aren't using require, script tag order matters here -->
+	
 	<script src="lib/bower_components/angular/angular.min.js"></script>
-	<script type="text/javascript" src="songs.js"></script>
+	<script src="lib/bower_components/angular-route/angular-route.js"></script>
+	
+	<script type="text/javascript" src="app/main.js"></script>
+	<script src="app/songs.js"></script>
+	<script src="app/songStorage.js"></script>
+
 </body>
 
 </html>
