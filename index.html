@@ -10,7 +10,7 @@
 		Music History
 	</title>
 </head>
-<body>
+<body ng-app="SongsApp">
 <div id="red">
 
 <header>
@@ -39,63 +39,15 @@
 
 
 
-<div id="yellow">
-
-
-
-
-
-	<header> Strobe</header>
-
-	<div class="specific">
-
-		<ul>
-			<li>deadmau5</li>
-			<li>| Lack of a Better Name |</li>
-			<li>Electronic</li>
-		</ul>
-
+<div id="yellow" ng-controller="SongsCtrl">
+	<div>
+		<div ng-repeat="song in songs">
+    <h1>{{ song.title }}</h1>
+    <h2>{{ song.artist}}</h2>
+    <h3>{{ song.album}}</h3>
+		</div>
+    
 	</div>
-
-	<header>Nothing Else Matters</header>
-
-	<div class="specific">
-
-		<ul>
-			<li>Metallica</li>
-			<li>| Metallica |</li>
-			<li>Rock</li>
-		</ul>
-
-	</div>
-
-	<header>Take on Me</header>
-
-
-	<div class="specific">
-
-		<ul>
-			<li>A-ha</li>
-			<li>| Hunting High and Low |</li>
-			<li>Pop</li>
-		</ul>
-
-	</div>
-
-
-	<header>So What</header>
-
-
-	<div class="specific">
-
-		<ul>
-			<li>Miles Davis</li>
-			<li>| Kind of Blue |</li>
-			<li>Jazz</li>
-		</ul>
-
-	</div>
-
 </div>
 
 
@@ -111,49 +63,17 @@
 
 <div id="artist-name">
 	<select name="Artist" id="Artist">
-		<option>deadmau5</option>
-		<option>A-ha</option>
-		<option>Metallica</option>
-		<option>Miles Davis</option>
-		<option>Andy Blueman</option>
 	</select>
 </div>
 
 <div id="album-name">
-	<select name="Album" id="Album">
-		<option>Lack of a Better Name</option>
-		<option>Hunting High and Low</option>
-		<option>Metallica</option>
-		<option>Kind of Blue</option>
-		<option>Sea Tides E.P.</option>
+	<select name="Album">
 	</select>
 </div>
-
-<div id="checkboxes">
-
-	<div id="row1">
-		<input type="checkbox" name="genre" value="Rock"> Rock
-
-		<input type="checkbox" name="genre" value="Pop"> Pop
-
-		<input type="checkbox" name="genre" value="Blues"> Blues
-	</div>
-
-	<div id="row2">
-		<input type="checkbox" name="genre" value="Classical"> Classical
-
-		<input type="checkbox" name="genre" value="Jazz"> Jazz
-
-		<input type="checkbox" name="genre" value="Hip-Hop"> Hip-Hop
-	</div>
-
-</div>
-
-
 </form>
 </div>
 
-	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="lib/bower_components/angular/angular.min.js"></script>
 	<script type="text/javascript" src="songs.js"></script>
 </body>
 

@@ -1,35 +1,41 @@
-$(document).ready(function() {
+var app = angular.module("SongsApp", []);
   // All the JavaScript that depends on jQuery will be written here
 
+app.controller("SongsCtrl", ["$q", "$http", "$scope", function($q, $http, $scope) {
+	$scope.title = "Welcome to your music history";
+	$scope.songs = [];
+  	$scope.removeSong = function(song) {
+  // Do you see the PFM here of full object comparison?
+ 		 var todoIndex = $scope.todos.indexOf(todo); 
 
-	$("#showform").click(function() {
-		$("#yellow").hide();
-		$("#blue").hide();
-		$(".hidden").show();
-	});
+ 		if (todoIndex >= 0) {
+   			$scope.songs.splice(todoIndex, 1);
+  		}
+  	};
+  // Promise gets the songs and displays them on the dom
+	var getSongs = $q(function(resolve, reject) {
 
-	$("#listform").click(function() {
-		$("#yellow").show();
-		$("#blue").show();
-		$(".hidden").hide();
-	});
+		console.log("working");
 
-});
-		
-// Trying to make this work
+  		$http.get('./json/part5.json')
+      	.success(
+        function(objectFromJSONFile) {
+        	resolve(objectFromJSONFile.songs);
+        }, 
+        function(error) {
+          reject(error);
+        });
+    });
+	
+	console.log("getSongs", getSongs);
 
-$("add").click(function() {
-	songs.push$("songname").value + " by " + $("artistname").value + " on the album " + $("albumname").value;
-	songLoader();    
-});
+	getSongs.then(function (songs) {
+    	console.log("songs",songs);
+    	$scope.songs = songs;
+  	},
+	function (error) {
+    	console.log("Failed");
+  	});
 
-  $.ajax({
-    url: "json/part5.json"
-  }).done(function(contentsOfTheFile) {
-    // When you tell jQuery to read a file via the ajax method
-    // it reads the contents, and then executes whatever function
-    // that you specify here in the done() method, and passes in
-    // the contents of the file as the first argument.
-    console.log("the contents of songs.json");
-    console.log(contentsOfTheFile);
-  });
+}]);
+
