@@ -17,7 +17,7 @@ app.controller("SongsCtrl", ["$q", "$http", "$scope", function($q, $http, $scope
 
 		console.log("working");
 
-  		$http.get('./json/part5.json')
+  		var getFirstSongs = $http.get('./json/part5.json')
       	.success(
         function(objectFromJSONFile) {
         	resolve(objectFromJSONFile.songs);
@@ -26,7 +26,7 @@ app.controller("SongsCtrl", ["$q", "$http", "$scope", function($q, $http, $scope
           reject(error);
         });
     });
-	
+
 	console.log("getSongs", getSongs);
 
 	getSongs.then(function (songs) {
