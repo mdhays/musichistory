@@ -8,7 +8,7 @@
 	</title>
 </head>
 <!-- "SongsApp" is the router that handles the partials. -->
-<body ng-app="SongsApp">
+<body ng-app="SongsApp" class="container">
 
 	<!-- Red Box / Navigation Bar -->
 	<div id="red">
@@ -33,7 +33,7 @@
 	<div ng-view></div>
 
 	<!-- Since we aren't using require, script tag order matters here -->
-	<!-- Bower stuff will go here -->
+	<!-- Bower script paths will go here -->
 	<script src="lib/bower_components/angular/angular.min.js"></script>
 	<script src="lib/bower_components/angular-route/angular-route.js"></script>
 	<script src="lib/bower_components/jquery/dist/jquery.min.js"></script>
