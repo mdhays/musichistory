@@ -1,0 +1,19 @@
+date: 12/4/15
+Things to do for the musichistory branch version6redux.
+
+Goals -
+
+1. To link up my firebase with the app using angularfire.
+
+2. To use angularfire to display things on the page.
+
+Planning and checklist -
+
+√	1. Install firebase and angularfire and link them to the index (firebase first, then angularfire).
+	
+	2. Set up a module with the proper dependencies and a controller for referencing firebase.
+
+	3. Adjust the HTML and routing so that they're binding to the right controller.
+
+	4. Make sure everything works and is lint free.
+
