@@ -1,4 +1,4 @@
-app.controller("SongCtrl", ["$q", "$http", "$scope", "simpleSongs", function($q, $http, $scope, simpleSongs) {
+app.controller("SongsCtrl", ["$q", "$http", "$scope", "simpleSongs", function($q, $http, $scope, simpleSongs) {
 	$scope.title = "Welcome to your music history";
 	// Array to put songs from the json files into.
   $scope.songs = [];

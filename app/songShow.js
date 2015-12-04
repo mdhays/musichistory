@@ -1,4 +1,4 @@
-var app = angular.module("SongApp", ['firebase', 'ngRoute']);
+var app = angular.module("SongShow", ['firebase', 'ngRoute']);
 
 app.controller("SongCtrl", 
   ["$scope", 
