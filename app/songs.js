@@ -7,8 +7,8 @@ app.controller("SongCtrl", ["$q", "$http", "$scope", "simpleSongs", function($q,
 
     simpleSongs.loadSongs().then(function(s) {
       $scope.songs = s;
-      console.log($scope.songs)
-    })
+      console.log($scope.songs);
+    });
   	//Add a new function
 }]);
 

@@ -3,7 +3,7 @@ app.factory("simpleSongs",
 function($q, $http) {
 
   var song_list;
-
+  // Load songs initiates the promise.
   function loadSongs () {
     return $q(function(resolve, reject) {
         $http.get('./json/part5.json')
@@ -56,5 +56,5 @@ function($q, $http) {
       song_list.push(song);
       return song_list;
     }
-  }
+  };
 }]);
