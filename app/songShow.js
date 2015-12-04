@@ -1,5 +1,3 @@
-var app = angular.module("SongShow", ['firebase', 'ngRoute']);
-
 app.controller("SongCtrl", 
   ["$scope", 
    "$firebaseArray", 
